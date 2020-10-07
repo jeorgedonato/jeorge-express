@@ -35,22 +35,6 @@ section{
     background-color: black;
 }
 
-
-.skill-banner{
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 225%;
-}
-
-.skills-image{
-  position: absolute;
-  /* width: 100%; */
-  left: 13%;
-  top: 233%;
-}
-
-
 .intro-first{
   position: absolute;
   top: 20%;
@@ -78,6 +62,11 @@ section{
   color: #4a4a4a;
   /* width: ; */
   width: max-content;
+}
+
+.center-things{
+  display: block;
+  margin: 0px auto;
 }
 
 .profile-pic{
@@ -186,9 +175,26 @@ section{
   left: 50%;
   transform: translate(-50%,-30%);
   }
+
+
+  .portfolio-div{
+  padding-top: 0 !important;
+}
+
+.skill-div{
+  padding-top: 0 !important;
+}
+
+#about-page{
+  height: 85%;
+}
 }
 /* Animations */
-
+@media screen and (max-width: 768px){
+  #skills-page{
+    height: auto
+  }
+}
 
 
 @keyframes text-2nd {
@@ -274,3 +280,15 @@ section{
   background-position-y: 10px;
 }
 
+.tile-content{
+  width: 100%;
+  background-color: rgba(87, 94, 107,0.64);
+}
+
+.portfolio-div{
+  padding-top: 4rem;
+}
+
+.skill-div{
+  padding-top: 4rem;
+}
