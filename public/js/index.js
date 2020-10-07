@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+  const footer = document.querySelector(".footer");
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   // console.log($navbarBurgers)
@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         myNavbar.classList.remove('is-active');
 
         const target = e.currentTarget;
-        currentTarget = target.dataset.href
+        currentTarget = target.dataset.href;
+        footer.style.display = 'none';
         if (currentTarget === 'home-page') return window.scrollTo(0, 0)
         const curHref = document.querySelector(`#${target.dataset.href}`);
         curHref.scrollIntoView();
@@ -41,6 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // function toggleFooter() {
+  //   const x = document.querySelector(".footer");
+  //   if (x.style.display === "none") {
+  //     x.style.display = "block";
+  //   } else {
+  //     x.style.display = "none";
+  //   }
+  // }
+
   // console.log(document.querySelectorAll('section'))
+
+  document.querySelector('.body-class').onscroll = function (e) {
+    footer.style.display = 'block';
+  }
 
 });

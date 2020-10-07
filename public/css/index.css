@@ -292,3 +292,11 @@ section{
 .skill-div{
   padding-top: 4rem;
 }
+
+
+.footer{
+  padding: .5rem;
+      position: fixed;
+    width: 100%;
+    bottom: 0;
+}
