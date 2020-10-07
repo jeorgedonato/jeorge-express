@@ -1,9 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html,body{
   scroll-behavior: smooth;
   height: 100%;
-  margin: 0;
+  
 }
+
 
 section{
   height: 100vh;
+  padding: 5rem 3rem;
+  font-family: 'Heebo', sans-serif;
+  /* scroll-padding-top: -10px; */
 }
+
+#home-page{
+  color: black;
+}
+
+.about-container{
+  padding: 5em 7em;
+}
+
+.resume-bar{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform: translate(0,0);
+    background-color: black;
+}
+
+
+.skill-banner{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 225%;
+}
+
+.skills-image{
+  position: absolute;
+  /* width: 100%; */
+  left: 13%;
+  top: 233%;
+}
+
+
+.intro-first{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: 'Heebo', sans-serif;
+  color: #4a4a4a;
+  /* width: ; */
+  width: max-content;
+  /* background-color: #949ba5; */
+/* opacity: 0.55; */
+}
+
+
+.intro-second{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: 'Heebo', sans-serif;
+  color: #4a4a4a;
+  /* width: ; */
+  width: max-content;
+}
+
+.profile-pic{
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%,-30%);
+}
+
+.profile-img{
+  height: auto !important;
+    width: 50% !important;
+    border: 2px solid #7e827d;
+}
+
+.contact-bar{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: 'Heebo', sans-serif;
+  color: #4a4a4a;
+  /* width: ; */
+  width: max-content;
+  
+  /* background-color: #949ba5; */
+/* opacity: 0.55; */
+}
+
+.contact-bar span{
+  padding-left: 10px;
+}
+
+.contact-bar span:nth-child(1) a{
+  color: black;
+}
+
+.contact-bar span:nth-child(2) a{
+  color: #2258ea;
+}
+
+@media screen and (max-width: 800px)
+{
+  .intro-first{
+    font-size: 1.3rem;
+  }
+  .intro-second{
+    font-size: 1.3rem;
+  }
+
+  .profile-img{
+    height: auto !important;
+      width: 60% !important;
+  }
+
+  .profile-pic{
+    /* position: absolute; */
+    top: 40%;
+    left: 58%;
+    transform: translate(-50%,-30%);
+  }
+
+}
+
+@media screen and (max-width : 850px)
+{
+  .about-container{
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width : 600px)
+{
+  .profile-img{
+  height: auto !important;
+    width: 90% !important;
+}
+
+  .profile-pic{
+    /* position: absolute; */
+    top: 40%;
+    left: 53%;
+    transform: translate(-50%,-30%);
+  }
+
+  .about-container{
+    padding: 0;
+  }
+
+  .about-container h5 {
+    font-size: 2rem !important;
+  }
+
+  .about-container p {
+    font-size: 1rem !important;
+  }
+
+  #about-page{
+    padding: 4rem 2rem;
+  }
+
+  .contact-bar{
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+  }
+}
+/* Animations */
+
+
+
+@keyframes text-2nd {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  
+  60%, 90% {
+    width: 10em;
+  }
+}
+@keyframes text-1st {
+  0%, 50%, 100% {
+    width: 0;
+  }
+  10%, 40% {
+    width: 13em;
+  }
+}
+
+.text-1st {
+  animation: text-1st;
+}
+.text-2nd {
+  animation: text-2nd;
+}
+
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.text-1st, .text-2nd {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 15s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+.text-1st::after, .text-2nd::after{
+  content: "|";
+  color: #346532;
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+#to-make-to-go{
+  background-image: url(../images/tomaketogo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-position-y: 5px;
+}
+
+#weather-dashboard{
+  background-image: url(../images/weather-dashboard.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-position-y: 10px;
+    background-position-x: 11px;
+}
+
+#bootstocks{
+  background-image: url(/images/bootstocks.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-position-y: 10px;
+}
+

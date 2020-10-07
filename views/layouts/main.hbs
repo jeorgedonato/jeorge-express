@@ -13,9 +13,11 @@
   <title>Jeorge Donato | Full Stack Web Developer</title>
   <link rel="icon" href="/images/webicon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,200;0,400;0,500;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,400;0,500;1,500;1,700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Heebo:wght@300;400;600;700;800;900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="/css/index.css">
 </head>
 
@@ -24,8 +26,8 @@
   <header>
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item banner-container mt-3" href="index.html">
-          <img class="" src="images/portfolio-banner.jpg">
+        <a class="navbar-item banner-container mt-3" href="#top">
+          <img class="" src="/images/portfolio-banner.jpg">
         </a>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="my-navbar">
@@ -39,16 +41,16 @@
         <div class="navbar-end">
           <div class="navbar-item is-family-primary link-container">
             <!-- <div class="buttons"> -->
-            <a class="navbar-item is-size-5 has-text-centered-touch" href="#top">
+            <a class="navbar-item is-size-5 has-text-centered-touch" data-href="home-page">
               <strong>Home</strong>
             </a>
-            <a class="navbar-item is-size-5 has-text-centered-touch" href="#about-page">
+            <a class="navbar-item is-size-5 has-text-centered-touch" data-href="about-page">
               <strong>About</strong>
             </a>
-            <a class="navbar-item is-size-5 has-text-centered-touch" href="#skills-page">
+            <a class="navbar-item is-size-5 has-text-centered-touch" data-href="skills-page">
               <strong>Skills</strong>
             </a>
-            <a class="navbar-item is-size-5 has-text-centered-touch" href="#portfolio-page">
+            <a class="navbar-item is-size-5 has-text-centered-touch" data-href="portfolio-page">
               <strong>Portfolio</strong>
             </a>
             <!-- </div> -->
@@ -57,7 +59,10 @@
       </div>
     </nav>
   </header>
+
   {{{body}}}
+
+  <script src="/js/index.js"></script>
 </body>
 
 
